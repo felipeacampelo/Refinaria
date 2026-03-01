@@ -263,7 +263,7 @@ export default function Home() {
               <div className="text-center">
                 <h3 className="text-2xl font-bold mb-2">PIX à Vista</h3>
                 <div className="text-4xl font-bold mb-4" style={{ color: '#AB3933' }}>
-                  R$ 430,00
+                  R$ {pixCashPrice.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
                 </div>
                 <p className="text-gray-600 mb-6">Pagamento único via PIX</p>
                 <button onClick={() => navigate('/inscricao')} className="btn-primary w-full">
@@ -277,10 +277,10 @@ export default function Home() {
               <div className="text-center">
                 <h3 className="text-2xl font-bold mb-2">Cartão de Crédito</h3>
                 <div className="text-4xl font-bold mb-4" style={{ color: '#AB3933' }}>
-                  R$ 450,00
+                  R$ {creditCardPrice.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
                 </div>
                 <p className="text-gray-600 mb-6">
-                  À vista ou até 2x de R$ 225,00<br/>
+                  À vista ou até {maxInstallments}x de R$ {creditCardInstallmentValue}<br/>
                   no cartão
                 </p>
                 <button onClick={() => navigate('/inscricao')} className="btn-primary w-full">
