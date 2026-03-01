@@ -163,7 +163,7 @@ export default function AdminDashboard() {
               <span className="hidden sm:inline">Exportar</span> CSV
             </button>
             <a
-              href="https://gestao-areamais-production.up.railway.app/admin"
+              href="https://refinaria-production.up.railway.app/admin"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-1 sm:gap-2 px-3 sm:px-4 py-2 rounded-lg transition-colors text-sm sm:text-base"
