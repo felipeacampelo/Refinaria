@@ -126,9 +126,9 @@ SITE_ID = 1
 
 # CORS - Configuração de produção
 CORS_ALLOWED_ORIGINS = [
-    'https://frontend-a-production.up.railway.app',
-    'https://areamais.com.br',
-    'https://www.areamais.com.br',
+    'https://refinaria-frontend-production.up.railway.app',
+    'https://www.farolibc.com.br',
+    'https://farolibc.com.br',
     'http://localhost:3000',
     'http://127.0.0.1:3000',
     'http://localhost:5173',
@@ -167,7 +167,7 @@ CORS_PREFLIGHT_MAX_AGE = 86400
 # CSRF / Proxy / HTTPS
 CSRF_TRUSTED_ORIGINS = config(
     'CSRF_TRUSTED_ORIGINS',
-    default='https://*.up.railway.app,https://gestao-areamais-production.up.railway.app,https://www.areamais.com.br,https://areamais.com.br',
+    default='https://*.up.railway.app,https://refinaria-production.up.railway.app,https://refinaria-frontend-production.up.railway.app,https://www.farolibc.com.br,https://farolibc.com.br',
     cast=Csv()
 )
 USE_X_FORWARDED_HOST = True
