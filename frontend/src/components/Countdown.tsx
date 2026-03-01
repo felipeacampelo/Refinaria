@@ -39,12 +39,12 @@ export default function Countdown({ targetDate }: CountdownProps) {
 
   const TimeBox = ({ value, label }: { value: number; label: string }) => (
     <div className="flex flex-col items-center">
-      <div className="bg-black/80 backdrop-blur-sm rounded-lg shadow-xl p-4 md:p-6 min-w-[80px] md:min-w-[100px] border-2 transition-all duration-300 hover:scale-105" style={{ borderColor: '#E63946' }}>
-        <div className="text-3xl md:text-5xl font-bold" style={{ color: '#D4A574' }}>
+      <div className="bg-black/80 backdrop-blur-sm rounded-lg shadow-xl p-4 md:p-6 min-w-[80px] md:min-w-[100px] border-2 transition-all duration-300 hover:scale-105" style={{ borderColor: '#AB3933' }}>
+        <div className="text-3xl md:text-5xl font-bold" style={{ color: '#E3C276' }}>
           {value.toString().padStart(2, '0')}
         </div>
       </div>
-      <div className="text-sm md:text-base font-medium mt-2" style={{ color: '#D4A574' }}>
+      <div className="text-sm md:text-base font-medium mt-2" style={{ color: '#E3C276' }}>
         {label}
       </div>
     </div>

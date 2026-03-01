@@ -31,7 +31,7 @@ export default function ProgressSteps({ currentStep, steps }: ProgressStepsProps
                     ? '#000000' 
                     : step.number === currentStep 
                     ? '#ffffff' 
-                    : '#6b7280',
+                    : '#C85A54280',
                   boxShadow: step.number === currentStep ? '0 0 0 4px rgba(165, 44, 240, 0.2)' : 'none'
                 }}
               >
@@ -46,7 +46,7 @@ export default function ProgressSteps({ currentStep, steps }: ProgressStepsProps
               <div className="mt-3 text-center">
                 <div
                   className="text-sm font-semibold"
-                  style={{ color: step.number === currentStep ? '#B22222' : '#374151' }}
+                  style={{ color: step.number === currentStep ? '#B22222' : '#AB3933151' }}
                 >
                   {step.title}
                 </div>

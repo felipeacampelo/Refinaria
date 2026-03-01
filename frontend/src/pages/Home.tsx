@@ -92,9 +92,9 @@ export default function Home() {
                   <button
                     onClick={() => navigate('/admin')}
                     className="text-xs md:text-sm px-2 md:px-4 py-1 md:py-2 rounded-lg transition-colors font-medium"
-                    style={{ backgroundColor: '#D4A574', color: '#1A1A1A' }}
+                    style={{ backgroundColor: '#E3C276', color: '#1A1A1A' }}
                     onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#E8C9A0'}
-                    onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#D4A574'}
+                    onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#E3C276'}
                   >
                     Admin
                   </button>
@@ -120,9 +120,9 @@ export default function Home() {
               <button
                 onClick={() => navigate('/register')}
                 className="text-xs md:text-sm px-2 md:px-4 py-1 md:py-2 rounded-lg transition-colors font-medium"
-                style={{ backgroundColor: '#E63946', color: '#ffffff' }}
-                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#FF6B77'}
-                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#E63946'}
+                style={{ backgroundColor: '#AB3933', color: '#ffffff' }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#C85A54'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#AB3933'}
               >
                 Cadastrar
               </button>
@@ -132,21 +132,21 @@ export default function Home() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative text-white py-20 pt-24 md:pt-32" style={{
-        background: 'linear-gradient(135deg, #C1121F 0%, #E63946 50%, #D4A574 100%)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed'
-      }}>
+      <section 
+        className="relative text-white py-20 pt-24 md:pt-32 min-h-[60vh] md:min-h-screen bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: 'url(/images/BACKGROUND%20SITE%20REFINARIA%202026.png)',
+          backgroundColor: '#AB3933',
+        }}>
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="font-bold tracking-wider" style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 'clamp(5rem, 20vw, 14rem)', marginBottom: '-0.5rem', letterSpacing: '0.05em' }}>
+            <h1 className="tracking-wider" style={{ fontFamily: "'Oswald', 'Bebas Neue', sans-serif", fontSize: 'clamp(5rem, 20vw, 14rem)', marginBottom: '-0.5rem', letterSpacing: '0.05em', fontWeight: 500 }}>
               REFINARIA
             </h1>
-            <p className="text-lg md:text-2xl mb-8" style={{ color: '#D4A574' }}>
-              RETIRO 2026
+            <p className="text-lg md:text-2xl mb-8" style={{ color: '#E3C276' }}>
+              
             </p>
             
             {/* Countdown */}
@@ -165,16 +165,16 @@ export default function Home() {
                 className="font-semibold py-3 px-6 rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg border-2"
                 style={{
                   backgroundColor: '#1A1A1A',
-                  color: '#D4A574',
-                  borderColor: '#D4A574'
+                  color: '#E3C276',
+                  borderColor: '#E3C276'
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = '#D4A574';
+                  e.currentTarget.style.backgroundColor = '#E3C276';
                   e.currentTarget.style.color = '#1A1A1A';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.backgroundColor = '#1A1A1A';
-                  e.currentTarget.style.color = '#D4A574';
+                  e.currentTarget.style.color = '#E3C276';
                 }}
               >
                 Fazer Inscrição
@@ -195,12 +195,12 @@ export default function Home() {
               {/* Data */}
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0">
-                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-full" style={{ backgroundColor: '#E63946' }}>
+                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-full" style={{ backgroundColor: '#AB3933' }}>
                     <Calendar className="w-7 h-7 text-white" />
                   </div>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-lg font-semibold mb-1" style={{ color: '#E63946' }}>Data</h3>
+                  <h3 className="text-lg font-semibold mb-1" style={{ color: '#AB3933' }}>Data</h3>
                   <p className="text-2xl font-bold text-gray-900">08, 09 e 10 de maio</p>
                   <p className="text-sm text-gray-600 mt-1"></p>
                 </div>
@@ -209,12 +209,12 @@ export default function Home() {
               {/* Local */}
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0">
-                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-full" style={{ backgroundColor: '#E63946' }}>
+                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-full" style={{ backgroundColor: '#AB3933' }}>
                     <MapPin className="w-7 h-7 text-white" />
                   </div>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-lg font-semibold mb-1" style={{ color: '#E63946' }}>Local</h3>
+                  <h3 className="text-lg font-semibold mb-1" style={{ color: '#AB3933' }}>Local</h3>
                   <p className="text-2xl font-bold text-gray-900">El Rancho | Corumbá</p>
                   <p className="text-sm text-gray-600 mt-1"></p>
                 </div>
@@ -237,7 +237,7 @@ export default function Home() {
                 Mais informações sobre a programação em breve.
               </p>
               
-              <p className="text-xl text-center font-bold mt-8" style={{ color: '#E63946' }}>
+              <p className="text-xl text-center font-bold mt-8" style={{ color: '#AB3933' }}>
                 Garanta sua inscrição!
               </p>
             </div>
@@ -259,10 +259,10 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {/* PIX à Vista */}
-            <div className="card border-2 hover:shadow-2xl transition-all duration-300" style={{ borderColor: '#E63946' }}>
+            <div className="card border-2 hover:shadow-2xl transition-all duration-300" style={{ borderColor: '#AB3933' }}>
               <div className="text-center">
                 <h3 className="text-2xl font-bold mb-2">PIX à Vista</h3>
-                <div className="text-4xl font-bold mb-4" style={{ color: '#E63946' }}>
+                <div className="text-4xl font-bold mb-4" style={{ color: '#AB3933' }}>
                   R$ 430,00
                 </div>
                 <p className="text-gray-600 mb-6">Pagamento único via PIX</p>
@@ -273,10 +273,10 @@ export default function Home() {
             </div>
 
             {/* Cartão de Crédito */}
-            <div className="card border-2 hover:shadow-2xl transition-all duration-300" style={{ borderColor: '#E63946' }}>
+            <div className="card border-2 hover:shadow-2xl transition-all duration-300" style={{ borderColor: '#AB3933' }}>
               <div className="text-center">
                 <h3 className="text-2xl font-bold mb-2">Cartão de Crédito</h3>
-                <div className="text-4xl font-bold mb-4" style={{ color: '#E63946' }}>
+                <div className="text-4xl font-bold mb-4" style={{ color: '#AB3933' }}>
                   R$ 450,00
                 </div>
                 <p className="text-gray-600 mb-6">

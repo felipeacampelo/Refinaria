@@ -147,7 +147,7 @@ export default function EditEnrollment() {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600 mx-auto"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 style={{ borderColor: '#AB3933' }} mx-auto"></div>
           <p className="mt-4 text-gray-600">Carregando...</p>
         </div>
       </div>
@@ -160,9 +160,9 @@ export default function EditEnrollment() {
         <button
           onClick={() => navigate('/minhas-inscricoes')}
           className="flex items-center mb-8 font-medium transition-colors"
-          style={{ color: '#B22222' }}
+          style={{ color: '#AB3933' }}
           onMouseEnter={(e) => e.currentTarget.style.color = 'rgb(145, 24, 220)'}
-          onMouseLeave={(e) => e.currentTarget.style.color = '#B22222'}
+          onMouseLeave={(e) => e.currentTarget.style.color = '#AB3933'}
         >
           <ArrowLeft className="w-5 h-5 mr-2" style={{ color: 'inherit' }} />
           Voltar para Minhas Inscrições
@@ -197,7 +197,7 @@ export default function EditEnrollment() {
                 required
                 value={formData.nome_completo}
                 onChange={(e) => setFormData({ ...formData, nome_completo: e.target.value })}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple focus:border-transparent text-gray-900 bg-white"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red focus:border-transparent text-gray-900 bg-white"
               />
             </div>
 
@@ -210,7 +210,7 @@ export default function EditEnrollment() {
                 required
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple focus:border-transparent text-gray-900 bg-white"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red focus:border-transparent text-gray-900 bg-white"
               />
             </div>
 
@@ -225,7 +225,7 @@ export default function EditEnrollment() {
                   required
                   value={formData.telefone}
                   onChange={(e) => setFormData({ ...formData, telefone: e.target.value })}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple focus:border-transparent text-gray-900 bg-white"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red focus:border-transparent text-gray-900 bg-white"
                 />
               </div>
 
@@ -239,7 +239,7 @@ export default function EditEnrollment() {
                   required
                   value={formData.data_nascimento}
                   onChange={(e) => setFormData({ ...formData, data_nascimento: e.target.value })}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple focus:border-transparent text-gray-900 bg-white"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red focus:border-transparent text-gray-900 bg-white"
                 />
               </div>
             </div>
@@ -254,7 +254,7 @@ export default function EditEnrollment() {
                   required
                   value={formData.cpf}
                   onChange={(e) => setFormData({ ...formData, cpf: e.target.value })}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple focus:border-transparent text-gray-900 bg-white"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red focus:border-transparent text-gray-900 bg-white"
                   maxLength={14}
                 />
               </div>
@@ -269,7 +269,7 @@ export default function EditEnrollment() {
                   required
                   value={formData.rg}
                   onChange={(e) => setFormData({ ...formData, rg: e.target.value })}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple focus:border-transparent text-gray-900 bg-white"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red focus:border-transparent text-gray-900 bg-white"
                 />
               </div>
             </div>
@@ -283,7 +283,7 @@ export default function EditEnrollment() {
                 required
                 value={formData.cep}
                 onChange={(e) => setFormData({ ...formData, cep: e.target.value })}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple focus:border-transparent text-gray-900 bg-white"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red focus:border-transparent text-gray-900 bg-white"
                 maxLength={9}
               />
             </div>
@@ -296,7 +296,7 @@ export default function EditEnrollment() {
                 required
                 value={formData.tamanho_camiseta}
                 onChange={(e) => setFormData({ ...formData, tamanho_camiseta: e.target.value })}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple focus:border-transparent text-gray-900 bg-white"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red focus:border-transparent text-gray-900 bg-white"
               >
                 <option value="">Selecione o tamanho...</option>
                 <option value="PP">PP</option>
@@ -317,7 +317,7 @@ export default function EditEnrollment() {
                   required
                   value={formData.membro_batista_capital}
                   onChange={(e) => setFormData({ ...formData, membro_batista_capital: e.target.value })}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple focus:border-transparent text-gray-900 bg-white"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red focus:border-transparent text-gray-900 bg-white"
                 >
                   <option value="">Selecione...</option>
                   <option value="sim">Sim</option>
@@ -335,7 +335,7 @@ export default function EditEnrollment() {
                     required
                     value={formData.igreja}
                     onChange={(e) => setFormData({ ...formData, igreja: e.target.value })}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple focus:border-transparent text-gray-900 bg-white"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red focus:border-transparent text-gray-900 bg-white"
                   />
                 </div>
               )}
@@ -348,7 +348,7 @@ export default function EditEnrollment() {
                   type="text"
                   value={formData.lider_pg}
                   onChange={(e) => setFormData({ ...formData, lider_pg: e.target.value })}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple focus:border-transparent text-gray-900 bg-white"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red focus:border-transparent text-gray-900 bg-white"
                 />
               </div>
 
@@ -360,7 +360,7 @@ export default function EditEnrollment() {
                   value={formData.observacoes}
                   onChange={(e) => setFormData({ ...formData, observacoes: e.target.value })}
                   rows={4}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple focus:border-transparent text-gray-900 bg-white"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red focus:border-transparent text-gray-900 bg-white"
                 />
               </div>
             </div>
@@ -380,42 +380,40 @@ export default function EditEnrollment() {
                       value={couponCode}
                       onChange={(e) => setCouponCode(e.target.value.toUpperCase())}
                       placeholder="Digite o código do cupom"
-                      className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent text-gray-900 bg-white uppercase"
+                      className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red focus:border-transparent text-gray-900 bg-white uppercase"
                       disabled={validatingCoupon}
                     />
                     <button
                       type="button"
                       onClick={handleApplyCoupon}
                       disabled={validatingCoupon || !couponCode.trim()}
-                      className="px-6 py-3 bg-purple-600 text-white rounded-lg font-medium hover:bg-purple-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="px-6 py-3 bg-red text-white rounded-lg font-medium hover:bg-red-dark transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       {validatingCoupon ? 'Validando...' : 'Aplicar'}
                     </button>
                   </div>
                 ) : (
-                  <div className="bg-green-50 border-2 border-green-500 rounded-lg p-4">
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-3">
-                        <Check className="w-5 h-5 text-green-600" />
-                        <div>
-                          <p className="font-medium text-green-900">Cupom aplicado!</p>
-                          <p className="text-sm text-green-700">
-                            Código: <span className="font-mono font-bold">{couponCode}</span>
-                          </p>
-                          <p className="text-sm text-green-700">
-                            Desconto: <span className="font-bold">R$ {couponDiscount.toFixed(2)}</span>
-                          </p>
-                        </div>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                      <Check className="w-5 h-5 text-green-600" />
+                      <div>
+                        <p className="font-medium text-green-900">Cupom aplicado!</p>
+                        <p className="text-sm text-green-700">
+                          Código: <span className="font-mono font-bold">{couponCode}</span>
+                        </p>
+                        <p className="text-sm text-green-700">
+                          Desconto: <span className="font-bold">R$ {couponDiscount.toFixed(2)}</span>
+                        </p>
                       </div>
-                      <button
-                        type="button"
-                        onClick={handleRemoveCoupon}
-                        className="p-2 text-green-600 hover:bg-green-100 rounded-lg transition-colors"
-                        title="Remover cupom"
-                      >
-                        <X className="w-5 h-5" />
-                      </button>
                     </div>
+                    <button
+                      type="button"
+                      onClick={handleRemoveCoupon}
+                      className="p-2 text-green-600 hover:bg-green-100 rounded-lg transition-colors"
+                      title="Remover cupom"
+                    >
+                      <X className="w-5 h-5" />
+                    </button>
                   </div>
                 )}
                 

@@ -52,7 +52,7 @@ export default function MyEnrollments() {
   const getStatusIcon = (status: string) => {
     switch (status) {
       case 'PAID':
-        return <CheckCircle className="w-5 h-5" style={{ color: 'rgb(210, 243, 67)' }} />;
+        return <CheckCircle className="w-5 h-5" style={{ color: '#E3C276' }} />;
       case 'PENDING_PAYMENT':
         return <Clock className="w-5 h-5 text-yellow-500" />;
       case 'CANCELLED':
@@ -81,14 +81,14 @@ export default function MyEnrollments() {
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'PAID':
-        return 'rgb(210, 243, 67)';
+        return '#E3C276';
       case 'PENDING_PAYMENT':
         return '#eab308';
       case 'CANCELLED':
       case 'EXPIRED':
-        return '#ef4444';
+        return '#E3C276';
       default:
-        return '#6b7280';
+        return '#C85A54';
     }
   };
 
@@ -145,7 +145,7 @@ export default function MyEnrollments() {
                   key={enrollment.id}
                   className="border rounded-lg p-4 sm:p-6 hover:shadow-md transition-shadow"
                   style={{
-                    borderColor: enrollment.status === 'PAID' ? 'rgb(210, 243, 67)' : '#e5e7eb'
+                    borderColor: enrollment.status === 'PAID' ? '#E3C276' : '#e5e7eb'
                   }}
                 >
                   <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">

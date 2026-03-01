@@ -57,10 +57,10 @@ export default function ForgotPassword() {
       <div className="max-w-md w-full">
         {/* Header */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-4" style={{ backgroundColor: '#E63946' }}>
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-4" style={{ backgroundColor: '#AB3933' }}>
             <Mail className="w-8 h-8 text-white" />
           </div>
-          <h1 className="text-3xl font-bold mb-2" style={{ color: '#D4A574' }}>
+          <h1 className="text-3xl font-bold mb-2" style={{ color: '#E3C276' }}>
             Esqueceu a senha?
           </h1>
           <p className="text-gray-300">
@@ -90,7 +90,7 @@ export default function ForgotPassword() {
                 onChange={(e) => setEmail(e.target.value)}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-900 bg-white"
                 style={{ outline: 'none' }}
-                onFocus={(e) => e.currentTarget.style.boxShadow = '0 0 0 2px #E63946'}
+                onFocus={(e) => e.currentTarget.style.boxShadow = '0 0 0 2px #AB3933'}
                 onBlur={(e) => e.currentTarget.style.boxShadow = 'none'}
                 placeholder="seu@email.com"
               />
@@ -109,9 +109,9 @@ export default function ForgotPassword() {
             <Link
               to="/login"
               className="inline-flex items-center gap-2 text-sm"
-              style={{ color: '#D4A574' }}
+              style={{ color: '#E3C276' }}
               onMouseEnter={(e) => e.currentTarget.style.color = 'rgb(210, 243, 67)'}
-              onMouseLeave={(e) => e.currentTarget.style.color = '#D4A574'}
+              onMouseLeave={(e) => e.currentTarget.style.color = '#E3C276'}
             >
               <ArrowLeft className="w-4 h-4" style={{ color: 'inherit' }} />
               Voltar para Login

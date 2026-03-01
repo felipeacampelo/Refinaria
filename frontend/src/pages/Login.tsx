@@ -49,7 +49,7 @@ export default function Login() {
               className="w-16 h-16 object-contain"
             />
           </div>
-          <h1 className="text-3xl font-bold mb-2" style={{ color: '#D4A574' }}>
+          <h1 className="text-3xl font-bold mb-2" style={{ color: '#E3C276' }}>
             Bem-vindo de volta!
           </h1>
           <p className="text-gray-300">
@@ -79,7 +79,7 @@ export default function Login() {
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-900 bg-white"
                 style={{ outline: 'none' }}
-                onFocus={(e) => e.currentTarget.style.boxShadow = '0 0 0 2px #E63946'}
+                onFocus={(e) => e.currentTarget.style.boxShadow = '0 0 0 2px #AB3933'}
                 onBlur={(e) => e.currentTarget.style.boxShadow = 'none'}
                 placeholder="seu@email.com"
               />
@@ -97,7 +97,7 @@ export default function Login() {
                 onChange={(e) => setFormData({ ...formData, password: e.target.value })}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-900 bg-white"
                 style={{ outline: 'none' }}
-                onFocus={(e) => e.currentTarget.style.boxShadow = '0 0 0 2px #E63946'}
+                onFocus={(e) => e.currentTarget.style.boxShadow = '0 0 0 2px #AB3933'}
                 onBlur={(e) => e.currentTarget.style.boxShadow = 'none'}
                 placeholder="••••••••"
               />
@@ -108,16 +108,16 @@ export default function Login() {
                 <input
                   type="checkbox"
                   className="w-4 h-4 border-gray-300 rounded"
-                  style={{ accentColor: '#E63946' }}
+                  style={{ accentColor: '#AB3933' }}
                 />
                 <span className="ml-2 text-sm text-gray-600">Lembrar-me</span>
               </label>
               <Link
                 to="/forgot-password"
                 className="text-sm font-medium"
-                style={{ color: '#E63946' }}
+                style={{ color: '#AB3933' }}
                 onMouseEnter={(e) => e.currentTarget.style.color = 'rgb(145, 24, 220)'}
-                onMouseLeave={(e) => e.currentTarget.style.color = '#E63946'}
+                onMouseLeave={(e) => e.currentTarget.style.color = '#AB3933'}
               >
                 Esqueceu a senha?
               </Link>
@@ -138,9 +138,9 @@ export default function Login() {
               <Link
                 to="/register"
                 className="font-medium"
-                style={{ color: '#E63946' }}
+                style={{ color: '#AB3933' }}
                 onMouseEnter={(e) => e.currentTarget.style.color = 'rgb(145, 24, 220)'}
-                onMouseLeave={(e) => e.currentTarget.style.color = '#E63946'}
+                onMouseLeave={(e) => e.currentTarget.style.color = '#AB3933'}
               >
                 Cadastre-se
               </Link>
@@ -152,9 +152,9 @@ export default function Login() {
           <Link
             to="/"
             className="text-sm"
-            style={{ color: '#D4A574' }}
+            style={{ color: '#E3C276' }}
             onMouseEnter={(e) => e.currentTarget.style.color = 'rgb(210, 243, 67)'}
-            onMouseLeave={(e) => e.currentTarget.style.color = '#D4A574'}
+            onMouseLeave={(e) => e.currentTarget.style.color = '#E3C276'}
           >
             ← Voltar para início
           </Link>

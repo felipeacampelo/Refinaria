@@ -22,19 +22,19 @@ export default {
           950: '#000000',
         },
         red: {
-          DEFAULT: '#E63946', // Vermelho coral
-          light: '#FF6B77',
-          dark: '#C1121F',
+          DEFAULT: '#AB3933', // rgb(171, 57, 51)
+          light: '#C85A54',
+          dark: '#8A2E29',
         },
         gold: {
-          DEFAULT: '#D4A574', // Dourado/Âmbar
-          light: '#E8C9A0',
-          dark: '#B8894F',
+          DEFAULT: '#E3C276', // rgb(227, 194, 118)
+          light: '#EDD49A',
+          dark: '#C9A85C',
         },
         cream: {
-          DEFAULT: '#F5E6D3',
-          light: '#FFF8F0',
-          dark: '#E8D4BC',
+          DEFAULT: '#DBE4C1', // rgb(219, 228, 193)
+          light: '#E8EED8',
+          dark: '#B8C9A0',
         },
       },
     },

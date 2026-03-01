@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap');
 
 @font-face {
   font-family: 'Procerus';
@@ -20,24 +20,24 @@
 @layer components {
   .btn-primary {
     @apply font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-md hover:shadow-xl;
-    background-color: #E63946;
+    background-color: #AB3933;
     color: #ffffff;
   }
   
   .btn-primary:hover {
-    background-color: #C1121F;
+    background-color: #8A2E29;
     transform: translateY(-2px);
   }
   
   .btn-secondary {
     @apply font-semibold py-3 px-6 rounded-lg border-2 transition-all duration-300;
     background-color: #1A1A1A;
-    color: #D4A574;
-    border-color: #D4A574;
+    color: #E3C276;
+    border-color: #E3C276;
   }
   
   .btn-secondary:hover {
-    background-color: #D4A574;
+    background-color: #E3C276;
     color: #1A1A1A;
     transform: translateY(-2px);
   }

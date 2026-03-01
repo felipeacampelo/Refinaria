@@ -65,7 +65,7 @@ export default function Register() {
               className="w-16 h-16 object-contain"
             />
           </div>
-          <h1 className="text-3xl font-bold mb-2" style={{ color: '#D4A574' }}>
+          <h1 className="text-3xl font-bold mb-2" style={{ color: '#E3C276' }}>
             Crie sua conta
           </h1>
           <p className="text-gray-300">
@@ -97,7 +97,7 @@ export default function Register() {
                   onChange={(e) => setFormData({ ...formData, first_name: e.target.value })}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-900 bg-white"
                   style={{ outline: 'none' }}
-                  onFocus={(e) => e.currentTarget.style.boxShadow = '0 0 0 2px #E63946'}
+                  onFocus={(e) => e.currentTarget.style.boxShadow = '0 0 0 2px #AB3933'}
                   onBlur={(e) => e.currentTarget.style.boxShadow = 'none'}
                   placeholder="João"
                 />
@@ -114,7 +114,7 @@ export default function Register() {
                   onChange={(e) => setFormData({ ...formData, last_name: e.target.value })}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-900 bg-white"
                   style={{ outline: 'none' }}
-                  onFocus={(e) => e.currentTarget.style.boxShadow = '0 0 0 2px #E63946'}
+                  onFocus={(e) => e.currentTarget.style.boxShadow = '0 0 0 2px #AB3933'}
                   onBlur={(e) => e.currentTarget.style.boxShadow = 'none'}
                   placeholder="Silva"
                 />
@@ -150,7 +150,7 @@ export default function Register() {
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-900 bg-white"
                   style={{ outline: 'none' }}
-                  onFocus={(e) => e.currentTarget.style.boxShadow = '0 0 0 2px #E63946'}
+                  onFocus={(e) => e.currentTarget.style.boxShadow = '0 0 0 2px #AB3933'}
                   onBlur={(e) => e.currentTarget.style.boxShadow = 'none'}
                   placeholder="(11) 99999-9999"
                 />
@@ -167,7 +167,7 @@ export default function Register() {
                   onChange={(e) => setFormData({ ...formData, cpf: e.target.value })}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-900 bg-white"
                   style={{ outline: 'none' }}
-                  onFocus={(e) => e.currentTarget.style.boxShadow = '0 0 0 2px #E63946'}
+                  onFocus={(e) => e.currentTarget.style.boxShadow = '0 0 0 2px #AB3933'}
                   onBlur={(e) => e.currentTarget.style.boxShadow = 'none'}
                   placeholder="000.000.000-00"
                   maxLength={14}
@@ -189,7 +189,7 @@ export default function Register() {
                   onChange={(e) => setFormData({ ...formData, password: e.target.value })}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-900 bg-white"
                   style={{ outline: 'none' }}
-                  onFocus={(e) => e.currentTarget.style.boxShadow = '0 0 0 2px #E63946'}
+                  onFocus={(e) => e.currentTarget.style.boxShadow = '0 0 0 2px #AB3933'}
                   onBlur={(e) => e.currentTarget.style.boxShadow = 'none'}
                   placeholder="••••••••"
                   minLength={8}
@@ -207,7 +207,7 @@ export default function Register() {
                   onChange={(e) => setFormData({ ...formData, password2: e.target.value })}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-900 bg-white"
                   style={{ outline: 'none' }}
-                  onFocus={(e) => e.currentTarget.style.boxShadow = '0 0 0 2px #E63946'}
+                  onFocus={(e) => e.currentTarget.style.boxShadow = '0 0 0 2px #AB3933'}
                   onBlur={(e) => e.currentTarget.style.boxShadow = 'none'}
                   placeholder="••••••••"
                   minLength={8}
@@ -220,15 +220,15 @@ export default function Register() {
                 type="checkbox"
                 required
                 className="w-4 h-4 border-gray-300 rounded mt-1"
-                style={{ accentColor: '#E63946' }}
+                style={{ accentColor: '#AB3933' }}
               />
               <label className="ml-2 text-sm text-gray-600">
                 Eu concordo com os{' '}
-                <Link to="/terms" className="font-medium" style={{ color: '#E63946' }} onMouseEnter={(e) => e.currentTarget.style.color = 'rgb(145, 24, 220)'} onMouseLeave={(e) => e.currentTarget.style.color = '#E63946'}>
+                <Link to="/terms" className="font-medium" style={{ color: '#AB3933' }} onMouseEnter={(e) => e.currentTarget.style.color = 'rgb(145, 24, 220)'} onMouseLeave={(e) => e.currentTarget.style.color = '#AB3933'}>
                   Termos de Uso
                 </Link>{' '}
                 e{' '}
-                <Link to="/privacy" className="font-medium" style={{ color: '#E63946' }} onMouseEnter={(e) => e.currentTarget.style.color = 'rgb(145, 24, 220)'} onMouseLeave={(e) => e.currentTarget.style.color = '#E63946'}>
+                <Link to="/privacy" className="font-medium" style={{ color: '#AB3933' }} onMouseEnter={(e) => e.currentTarget.style.color = 'rgb(145, 24, 220)'} onMouseLeave={(e) => e.currentTarget.style.color = '#AB3933'}>
                   Política de Privacidade
                 </Link>
               </label>
@@ -249,9 +249,9 @@ export default function Register() {
               <Link
                 to="/login"
                 className="font-medium"
-                style={{ color: '#E63946' }}
+                style={{ color: '#AB3933' }}
                 onMouseEnter={(e) => e.currentTarget.style.color = 'rgb(145, 24, 220)'}
-                onMouseLeave={(e) => e.currentTarget.style.color = '#E63946'}
+                onMouseLeave={(e) => e.currentTarget.style.color = '#AB3933'}
               >
                 Faça login
               </Link>
@@ -263,9 +263,9 @@ export default function Register() {
           <Link
             to="/"
             className="text-sm"
-            style={{ color: '#D4A574' }}
+            style={{ color: '#E3C276' }}
             onMouseEnter={(e) => e.currentTarget.style.color = 'rgb(210, 243, 67)'}
-            onMouseLeave={(e) => e.currentTarget.style.color = '#D4A574'}
+            onMouseLeave={(e) => e.currentTarget.style.color = '#E3C276'}
           >
             ← Voltar para início
           </Link>
