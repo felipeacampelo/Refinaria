@@ -8,7 +8,7 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#000000', // Preto
+          DEFAULT: '#1A1A1A', // Preto
           50: '#f5f5f5',
           100: '#e5e5e5',
           200: '#cccccc',
@@ -21,15 +21,20 @@ export default {
           900: '#1a1a1a',
           950: '#000000',
         },
-        purple: {
-          DEFAULT: 'rgb(165, 44, 240)', // #a52cf0
-          light: 'rgb(185, 84, 245)',
-          dark: 'rgb(145, 24, 220)',
+        red: {
+          DEFAULT: '#E63946', // Vermelho coral
+          light: '#FF6B77',
+          dark: '#C1121F',
         },
-        lime: {
-          DEFAULT: 'rgb(220, 253, 97)', // #dcfd61
-          light: 'rgb(230, 254, 127)',
-          dark: 'rgb(210, 243, 67)',
+        gold: {
+          DEFAULT: '#D4A574', // Dourado/Âmbar
+          light: '#E8C9A0',
+          dark: '#B8894F',
+        },
+        cream: {
+          DEFAULT: '#F5E6D3',
+          light: '#FFF8F0',
+          dark: '#E8D4BC',
         },
       },
     },

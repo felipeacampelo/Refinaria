@@ -73,10 +73,10 @@ export default function ResetPassword() {
       <div className="max-w-md w-full">
         {/* Header */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-4" style={{ backgroundColor: 'rgb(165, 44, 240)' }}>
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-4" style={{ backgroundColor: '#E63946' }}>
             <Lock className="w-8 h-8 text-white" />
           </div>
-          <h1 className="text-3xl font-bold mb-2" style={{ color: 'rgb(220, 253, 97)' }}>
+          <h1 className="text-3xl font-bold mb-2" style={{ color: '#D4A574' }}>
             Nova Senha
           </h1>
           <p className="text-gray-300">
@@ -106,7 +106,7 @@ export default function ResetPassword() {
                 onChange={(e) => setFormData({ ...formData, new_password: e.target.value })}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-900 bg-white"
                 style={{ outline: 'none' }}
-                onFocus={(e) => e.currentTarget.style.boxShadow = '0 0 0 2px rgb(165, 44, 240)'}
+                onFocus={(e) => e.currentTarget.style.boxShadow = '0 0 0 2px #E63946'}
                 onBlur={(e) => e.currentTarget.style.boxShadow = 'none'}
                 placeholder="••••••••"
                 minLength={8}
@@ -125,7 +125,7 @@ export default function ResetPassword() {
                 onChange={(e) => setFormData({ ...formData, new_password2: e.target.value })}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-900 bg-white"
                 style={{ outline: 'none' }}
-                onFocus={(e) => e.currentTarget.style.boxShadow = '0 0 0 2px rgb(165, 44, 240)'}
+                onFocus={(e) => e.currentTarget.style.boxShadow = '0 0 0 2px #E63946'}
                 onBlur={(e) => e.currentTarget.style.boxShadow = 'none'}
                 placeholder="••••••••"
                 minLength={8}
@@ -145,9 +145,9 @@ export default function ResetPassword() {
             <Link
               to="/login"
               className="text-sm"
-              style={{ color: 'rgb(220, 253, 97)' }}
+              style={{ color: '#D4A574' }}
               onMouseEnter={(e) => e.currentTarget.style.color = 'rgb(210, 243, 67)'}
-              onMouseLeave={(e) => e.currentTarget.style.color = 'rgb(220, 253, 97)'}
+              onMouseLeave={(e) => e.currentTarget.style.color = '#D4A574'}
             >
               Voltar para Login
             </Link>

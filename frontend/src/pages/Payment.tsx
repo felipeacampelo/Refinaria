@@ -200,9 +200,9 @@ export default function PaymentPage() {
         <button
           onClick={() => navigate(-1)}
           className="flex items-center mb-6 font-medium transition-colors"
-          style={{ color: 'rgb(165, 44, 240)' }}
-          onMouseEnter={(e) => e.currentTarget.style.color = 'rgb(145, 24, 220)'}
-          onMouseLeave={(e) => e.currentTarget.style.color = 'rgb(165, 44, 240)'}
+          style={{ color: '#B22222' }}
+          onMouseEnter={(e) => e.currentTarget.style.color = '#8B0000'}
+          onMouseLeave={(e) => e.currentTarget.style.color = '#B22222'}
         >
           <ArrowLeft className="w-5 h-5 mr-2" style={{ color: 'inherit' }} />
           Voltar
@@ -266,13 +266,13 @@ export default function PaymentPage() {
                 }}
                 className="border-2 rounded-lg p-4 sm:p-6 cursor-pointer transition-all"
                 style={{
-                  borderColor: paymentMethod === 'PIX_CASH' ? 'rgb(165, 44, 240)' : '#e5e7eb',
-                  backgroundColor: paymentMethod === 'PIX_CASH' ? 'rgba(165, 44, 240, 0.05)' : 'transparent'
+                  borderColor: paymentMethod === 'PIX_CASH' ? '#B22222' : '#e5e7eb',
+                  backgroundColor: paymentMethod === 'PIX_CASH' ? 'rgba(178, 34, 34, 0.05)' : 'transparent'
                 }}
               >
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
                   <div className="flex items-center">
-                    <QrCode className="w-6 h-6 mr-3 flex-shrink-0" style={{ color: 'rgb(165, 44, 240)' }} />
+                    <QrCode className="w-6 h-6 mr-3 flex-shrink-0" style={{ color: '#B22222' }} />
                     <div>
                       <h3 className="font-semibold text-base sm:text-lg">PIX à Vista</h3>
                       <p className="text-xs sm:text-sm text-gray-600">Pagamento único</p>
@@ -293,78 +293,24 @@ export default function PaymentPage() {
                 </div>
               </div>
 
-              {/* PIX Parcelado */}
-              <div
-                onClick={() => {
-                  setPaymentMethod('PIX_INSTALLMENT');
-                  if (installments === 1) setInstallments(3); // Default to 3 installments
-                }}
-                className="border-2 rounded-lg p-4 sm:p-6 cursor-pointer transition-all"
-                style={{
-                  borderColor: paymentMethod === 'PIX_INSTALLMENT' ? 'rgb(165, 44, 240)' : '#e5e7eb',
-                  backgroundColor: paymentMethod === 'PIX_INSTALLMENT' ? 'rgba(165, 44, 240, 0.05)' : 'transparent'
-                }}
-              >
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
-                  <div className="flex items-center">
-                    <QrCode className="w-6 h-6 mr-3 flex-shrink-0" style={{ color: 'rgb(165, 44, 240)' }} />
-                    <div>
-                      <h3 className="font-semibold text-base sm:text-lg">PIX Parcelado</h3>
-                      <p className="text-xs sm:text-sm text-gray-600">Parcele em até {enrollment?.max_installments || 6}x via PIX</p>
-                    </div>
-                  </div>
-                  {enrollment && (
-                    <div className="text-right">
-                      {hasDiscount && (
-                        <div className="text-sm text-gray-400 line-through">
-                          R$ {batchPixInstallmentPrice.toFixed(2)}
-                        </div>
-                      )}
-                      <div className="text-xl sm:text-2xl font-bold text-gray-900">
-                        R$ {pixInstallmentPrice.toFixed(2)}
-                      </div>
-                    </div>
-                  )}
-                </div>
-
-                {paymentMethod === 'PIX_INSTALLMENT' && (
-                  <div className="mt-4 pt-4 border-t">
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Número de parcelas:
-                    </label>
-                    <select
-                      value={installments}
-                      onChange={(e) => setInstallments(Number(e.target.value))}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple text-gray-900 bg-white"
-                    >
-                      {Array.from({ length: (enrollment?.max_installments || 6) - 1 }, (_, i) => i + 2).map((num) => (
-                        <option key={num} value={num}>
-                          {num}x de R$ {(pixInstallmentPrice / num).toFixed(2)}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                )}
-              </div>
-
               {/* Cartão de Crédito */}
               <div
                 onClick={() => {
                   setPaymentMethod('CREDIT_CARD');
-                  if (installments === 1) setInstallments(3); // Default to 3 installments
+                  if (installments === 1) setInstallments(2); // Default to 2 installments
                 }}
                 className="border-2 rounded-lg p-4 sm:p-6 cursor-pointer transition-all"
                 style={{
-                  borderColor: paymentMethod === 'CREDIT_CARD' ? 'rgb(165, 44, 240)' : '#e5e7eb',
-                  backgroundColor: paymentMethod === 'CREDIT_CARD' ? 'rgba(165, 44, 240, 0.05)' : 'transparent'
+                  borderColor: paymentMethod === 'CREDIT_CARD' ? '#B22222' : '#e5e7eb',
+                  backgroundColor: paymentMethod === 'CREDIT_CARD' ? 'rgba(178, 34, 34, 0.05)' : 'transparent'
                 }}
               >
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
                   <div className="flex items-center">
-                    <CreditCardIcon className="w-6 h-6 mr-3 flex-shrink-0" style={{ color: 'rgb(165, 44, 240)' }} />
+                    <CreditCardIcon className="w-6 h-6 mr-3 flex-shrink-0" style={{ color: '#B22222' }} />
                     <div>
                       <h3 className="font-semibold text-base sm:text-lg">Cartão de Crédito</h3>
-                      <p className="text-xs sm:text-sm text-gray-600">Parcele em até {enrollment?.max_installments || 7}x no cartão</p>
+                      <p className="text-xs sm:text-sm text-gray-600">À vista ou em até 2x no cartão</p>
                     </div>
                   </div>
                   {enrollment && (
@@ -392,11 +338,12 @@ export default function PaymentPage() {
                         onChange={(e) => setInstallments(Number(e.target.value))}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent appearance-none bg-white text-gray-900"
                       >
-                        {Array.from({ length: enrollment?.max_installments || 7 }, (_, i) => i + 1).map((num) => (
-                          <option key={num} value={num}>
-                            {num}x de R$ {(creditCardPrice / num).toFixed(2)}
-                          </option>
-                        ))}
+                        <option value={1}>
+                          1x de R$ {creditCardPrice.toFixed(2)}
+                        </option>
+                        <option value={2}>
+                          2x de R$ {(creditCardPrice / 2).toFixed(2)}
+                        </option>
                       </select>
                     </div>
                   </div>
@@ -419,9 +366,9 @@ export default function PaymentPage() {
                   <button
                     onClick={() => setShowCardForm(false)}
                     className="text-sm font-medium"
-                    style={{ color: 'rgb(165, 44, 240)' }}
+                    style={{ color: '#B22222' }}
                     onMouseEnter={(e) => e.currentTarget.style.color = 'rgb(145, 24, 220)'}
-                    onMouseLeave={(e) => e.currentTarget.style.color = 'rgb(165, 44, 240)'}
+                    onMouseLeave={(e) => e.currentTarget.style.color = '#B22222'}
                     disabled={loading}
                   >
                     ← Voltar
@@ -448,7 +395,7 @@ export default function PaymentPage() {
                   style={{
                     color: payment.status === 'CONFIRMED' || payment.status === 'RECEIVED'
                       ? 'rgb(210, 243, 67)'
-                      : 'rgb(165, 44, 240)'
+                      : '#B22222'
                   }}
                 />
               </div>
@@ -463,7 +410,7 @@ export default function PaymentPage() {
               {/* Indicação da Parcela */}
               {enrollment?.payment_method === 'PIX_INSTALLMENT' && (payment as any)?.installment_number && (
                 <div className="mb-3">
-                  <span className="inline-block px-4 py-2 rounded-full font-semibold text-sm" style={{ backgroundColor: 'rgba(165, 44, 240, 0.1)', color: 'rgb(165, 44, 240)' }}>
+                  <span className="inline-block px-4 py-2 rounded-full font-semibold text-sm" style={{ backgroundColor: 'rgba(165, 44, 240, 0.1)', color: '#B22222' }}>
                     Parcela {(payment as any).installment_number}/{enrollment.installments}
                   </span>
                 </div>
@@ -505,9 +452,9 @@ export default function PaymentPage() {
                   <button
                     onClick={copyPixCode}
                     className="px-6 py-3 rounded-lg transition-colors flex items-center gap-2 font-semibold"
-                    style={{ backgroundColor: 'rgb(165, 44, 240)', color: '#ffffff' }}
+                    style={{ backgroundColor: '#B22222', color: '#ffffff' }}
                     onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgb(145, 24, 220)'}
-                    onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'rgb(165, 44, 240)'}
+                    onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#B22222'}
                   >
                     {copied ? <Check className="w-5 h-5" /> : <Copy className="w-5 h-5" />}
                     {copied ? 'Copiado!' : 'Copiar'}
@@ -524,7 +471,7 @@ export default function PaymentPage() {
                   ? 'rgba(220, 253, 97, 0.1)' 
                   : 'rgba(165, 44, 240, 0.05)',
                 borderColor: payment.status === 'CONFIRMED' || payment.status === 'RECEIVED' 
-                  ? 'rgb(220, 253, 97)' 
+                  ? '#8B4513' 
                   : 'rgba(165, 44, 240, 0.2)'
               }}
             >

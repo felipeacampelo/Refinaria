@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap');
+
 @font-face {
   font-family: 'Procerus';
   src: url('/fonts/Procerus%20Regular.ttf') format('truetype');
@@ -17,24 +19,27 @@
 
 @layer components {
   .btn-primary {
-    @apply font-semibold py-3 px-6 rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg;
-    background-color: rgb(165, 44, 240);
+    @apply font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-md hover:shadow-xl;
+    background-color: #E63946;
     color: #ffffff;
   }
   
   .btn-primary:hover {
-    background-color: rgb(145, 24, 220);
+    background-color: #C1121F;
+    transform: translateY(-2px);
   }
   
   .btn-secondary {
-    @apply font-semibold py-3 px-6 rounded-lg border-2 transition-colors duration-200;
-    background-color: #000000;
-    color: rgb(220, 253, 97);
-    border-color: rgb(220, 253, 97);
+    @apply font-semibold py-3 px-6 rounded-lg border-2 transition-all duration-300;
+    background-color: #1A1A1A;
+    color: #D4A574;
+    border-color: #D4A574;
   }
   
   .btn-secondary:hover {
-    background-color: #1a1a1a;
+    background-color: #D4A574;
+    color: #1A1A1A;
+    transform: translateY(-2px);
   }
   
   .card {

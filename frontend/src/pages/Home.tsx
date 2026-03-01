@@ -92,9 +92,9 @@ export default function Home() {
                   <button
                     onClick={() => navigate('/admin')}
                     className="text-xs md:text-sm px-2 md:px-4 py-1 md:py-2 rounded-lg transition-colors font-medium"
-                    style={{ backgroundColor: 'rgb(220, 253, 97)', color: '#000000' }}
-                    onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgb(210, 243, 67)'}
-                    onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'rgb(220, 253, 97)'}
+                    style={{ backgroundColor: '#D4A574', color: '#1A1A1A' }}
+                    onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#E8C9A0'}
+                    onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#D4A574'}
                   >
                     Admin
                   </button>
@@ -120,9 +120,9 @@ export default function Home() {
               <button
                 onClick={() => navigate('/register')}
                 className="text-xs md:text-sm px-2 md:px-4 py-1 md:py-2 rounded-lg transition-colors font-medium"
-                style={{ backgroundColor: 'rgb(165, 44, 240)', color: '#ffffff' }}
-                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgb(185, 84, 245)'}
-                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'rgb(165, 44, 240)'}
+                style={{ backgroundColor: '#E63946', color: '#ffffff' }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#FF6B77'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#E63946'}
               >
                 Cadastrar
               </button>
@@ -133,7 +133,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative text-white py-20 pt-24 md:pt-32" style={{
-        backgroundImage: 'url(/images/hero-background.png)',
+        background: 'linear-gradient(135deg, #C1121F 0%, #E63946 50%, #D4A574 100%)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed'
@@ -142,11 +142,11 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="font-bold" style={{ fontFamily: 'Procerus, sans-serif', fontSize: 'clamp(4.5rem, 18vw, 12rem)', marginBottom: '-0.8rem' }}>
-              PELAS RUAS
+            <h1 className="font-bold tracking-wider" style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 'clamp(5rem, 20vw, 14rem)', marginBottom: '-0.5rem', letterSpacing: '0.05em' }}>
+              REFINARIA
             </h1>
-            <p className="text-lg md:text-2xl mb-8" style={{ color: 'rgb(220, 253, 97)' }}>
-              ACAMPAMENTO A+ 2026
+            <p className="text-lg md:text-2xl mb-8" style={{ color: '#D4A574' }}>
+              RETIRO 2026
             </p>
             
             {/* Countdown */}
@@ -164,17 +164,17 @@ export default function Home() {
                 onClick={() => navigate('/inscricao')} 
                 className="font-semibold py-3 px-6 rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg border-2"
                 style={{
-                  backgroundColor: '#000000',
-                  color: 'rgb(220, 253, 97)',
-                  borderColor: 'rgb(220, 253, 97)'
+                  backgroundColor: '#1A1A1A',
+                  color: '#D4A574',
+                  borderColor: '#D4A574'
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = 'rgb(220, 253, 97)';
-                  e.currentTarget.style.color = '#000000';
+                  e.currentTarget.style.backgroundColor = '#D4A574';
+                  e.currentTarget.style.color = '#1A1A1A';
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = '#000000';
-                  e.currentTarget.style.color = 'rgb(220, 253, 97)';
+                  e.currentTarget.style.backgroundColor = '#1A1A1A';
+                  e.currentTarget.style.color = '#D4A574';
                 }}
               >
                 Fazer Inscrição
@@ -195,13 +195,13 @@ export default function Home() {
               {/* Data */}
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0">
-                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-full" style={{ backgroundColor: 'rgb(165, 44, 240)' }}>
+                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-full" style={{ backgroundColor: '#E63946' }}>
                     <Calendar className="w-7 h-7 text-white" />
                   </div>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-lg font-semibold mb-1" style={{ color: 'rgb(165, 44, 240)' }}>Data</h3>
-                  <p className="text-2xl font-bold text-gray-900">13, 20, 26 a 28 de junho e 04 de julho</p>
+                  <h3 className="text-lg font-semibold mb-1" style={{ color: '#E63946' }}>Data</h3>
+                  <p className="text-2xl font-bold text-gray-900">08, 09 e 10 de maio</p>
                   <p className="text-sm text-gray-600 mt-1"></p>
                 </div>
               </div>
@@ -209,13 +209,13 @@ export default function Home() {
               {/* Local */}
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0">
-                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-full" style={{ backgroundColor: 'rgb(165, 44, 240)' }}>
+                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-full" style={{ backgroundColor: '#E63946' }}>
                     <MapPin className="w-7 h-7 text-white" />
                   </div>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-lg font-semibold mb-1" style={{ color: 'rgb(165, 44, 240)' }}>Local</h3>
-                  <p className="text-2xl font-bold text-gray-900">Acampamento El Rancho</p>
+                  <h3 className="text-lg font-semibold mb-1" style={{ color: '#E63946' }}>Local</h3>
+                  <p className="text-2xl font-bold text-gray-900">El Rancho | Corumbá</p>
                   <p className="text-sm text-gray-600 mt-1"></p>
                 </div>
               </div>
@@ -229,46 +229,16 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-              ACAMPAMENTO A+ 2026
+              REFINARIA 2026
             </h2>
             
             <div className="space-y-6 text-left">
-              <p className="text-lg text-gray-700 leading-relaxed">
-                As ruas estão cheias de pessoas alegres, bandeiras são levantadas e hinos são entoados. Estão todos em festa, mas falta algo.
+              <p className="text-lg text-gray-700 leading-relaxed text-center">
+                Mais informações sobre a programação em breve.
               </p>
               
-              <p className="text-lg text-gray-700 leading-relaxed">
-                Todos tem um sorriso no rosto, mas enxergo corações vazios, sozinhos, em busca de um propósito maior.
-              </p>
-              
-              <p className="text-lg text-gray-700 leading-relaxed">
-                Em 2026 iremos pelas ruas levantar a bandeira, gritando a verdade que é Cristo. So ele é a esperança verdadeira. Vamos fazer parte disso?
-              </p>
-              
-              <div className="bg-white rounded-lg p-6 shadow-sm border-l-4" style={{ borderColor: 'rgb(165, 44, 240)' }}>
-                <h3 className="text-xl font-bold mb-4" style={{ color: 'rgb(165, 44, 240)' }}>Programação:</h3>
-                
-                <div className="space-y-3">
-                  <p className="text-gray-700">
-                    <span className="font-semibold">13.06</span> - Iniciaremos nosso acampamento com o nosso pré madruga entre os nossos PG's.
-                  </p>
-                  
-                  <p className="text-gray-700">
-                    <span className="font-semibold">20.06</span> - Um sábado inteiro de conferência Pelas Ruas | Pré acamps com alguns convidados.
-                  </p>
-                  
-                  <p className="text-gray-700">
-                    <span className="font-semibold">26 a 28.06</span> - Nosso tradicional EL RANCHO, como você já conhece. Se não conhece, aumente sua expectativa.
-                  </p>
-                  
-                  <p className="text-gray-700">
-                    <span className="font-semibold">04.07</span> - Iremos pelas ruas de Brasília levantando a bandeira e gritando a verdade que Cristo é o Senhor!
-                  </p>
-                </div>
-              </div>
-              
-              <p className="text-xl text-center font-bold mt-8" style={{ color: 'rgb(165, 44, 240)' }}>
-                Garanta sua inscrição pra não ficar de fora de nada da nossa programação!
+              <p className="text-xl text-center font-bold mt-8" style={{ color: '#E63946' }}>
+                Garanta sua inscrição!
               </p>
             </div>
           </div>
@@ -287,16 +257,13 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {/* PIX à Vista */}
-            <div className="card border-2" style={{ borderColor: 'rgb(165, 44, 240)' }}>
+            <div className="card border-2 hover:shadow-2xl transition-all duration-300" style={{ borderColor: '#E63946' }}>
               <div className="text-center">
-                <div className="inline-block px-4 py-1 rounded-full text-sm font-semibold mb-4" style={{ backgroundColor: 'rgb(220, 253, 97)', color: '#000000' }}>
-                  Melhor Preço
-                </div>
                 <h3 className="text-2xl font-bold mb-2">PIX à Vista</h3>
-                <div className="text-4xl font-bold mb-4" style={{ color: 'rgb(165, 44, 240)' }}>
-                  R$ {pixCashPrice.toFixed(2)}
+                <div className="text-4xl font-bold mb-4" style={{ color: '#E63946' }}>
+                  R$ 430,00
                 </div>
                 <p className="text-gray-600 mb-6">Pagamento único via PIX</p>
                 <button onClick={() => navigate('/inscricao')} className="btn-primary w-full">
@@ -305,32 +272,15 @@ export default function Home() {
               </div>
             </div>
 
-            {/* PIX Parcelado */}
-            <div className="card border-2" style={{ borderColor: 'rgb(165, 44, 240)' }}>
-              <div className="text-center">
-                <h3 className="text-2xl font-bold mb-2">PIX Parcelado</h3>
-                <div className="text-4xl font-bold mb-4" style={{ color: 'rgb(165, 44, 240)' }}>
-                  R$ {pixInstallmentPrice.toFixed(2)}
-                </div>
-                <p className="text-gray-600 mb-6">
-                  Até {maxInstallments}x de R$ {pixInstallmentValue}<br/>
-                  via PIX
-                </p>
-                <button onClick={() => navigate('/inscricao')} className="btn-primary w-full">
-                  Inscrever-se
-                </button>
-              </div>
-            </div>
-
             {/* Cartão de Crédito */}
-            <div className="card border-2" style={{ borderColor: 'rgb(165, 44, 240)' }}>
+            <div className="card border-2 hover:shadow-2xl transition-all duration-300" style={{ borderColor: '#E63946' }}>
               <div className="text-center">
                 <h3 className="text-2xl font-bold mb-2">Cartão de Crédito</h3>
-                <div className="text-4xl font-bold mb-4" style={{ color: 'rgb(165, 44, 240)' }}>
-                  R$ {creditCardPrice.toFixed(2)}
+                <div className="text-4xl font-bold mb-4" style={{ color: '#E63946' }}>
+                  R$ 450,00
                 </div>
                 <p className="text-gray-600 mb-6">
-                  Até {maxInstallments}x de R$ {creditCardInstallmentValue}<br/>
+                  À vista ou até 2x de R$ 225,00<br/>
                   no cartão
                 </p>
                 <button onClick={() => navigate('/inscricao')} className="btn-primary w-full">
@@ -346,7 +296,7 @@ export default function Home() {
       <footer className="bg-gray-900 text-white py-8">
         <div className="container mx-auto px-4 text-center">
           <p className="text-gray-400">
-            © 2025 Área Mais | IGREJA BATISTA CAPITAL®
+            © 2026 Refinaria | Farol Treinamentos
           </p>
         </div>
       </footer>

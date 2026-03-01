@@ -23,9 +23,9 @@ export default function ProgressSteps({ currentStep, steps }: ProgressStepsProps
                 className="w-12 h-12 rounded-full flex items-center justify-center font-semibold text-lg transition-all duration-300"
                 style={{
                   backgroundColor: step.number < currentStep 
-                    ? 'rgb(220, 253, 97)' 
+                    ? '#8B4513' 
                     : step.number === currentStep 
-                    ? 'rgb(165, 44, 240)' 
+                    ? '#B22222' 
                     : '#e5e7eb',
                   color: step.number < currentStep 
                     ? '#000000' 
@@ -46,7 +46,7 @@ export default function ProgressSteps({ currentStep, steps }: ProgressStepsProps
               <div className="mt-3 text-center">
                 <div
                   className="text-sm font-semibold"
-                  style={{ color: step.number === currentStep ? 'rgb(165, 44, 240)' : '#374151' }}
+                  style={{ color: step.number === currentStep ? '#B22222' : '#374151' }}
                 >
                   {step.title}
                 </div>
@@ -61,7 +61,7 @@ export default function ProgressSteps({ currentStep, steps }: ProgressStepsProps
               <div className="flex-1 h-1 mx-4 -mt-12">
                 <div
                   className="h-full transition-all duration-300"
-                  style={{ backgroundColor: step.number < currentStep ? 'rgb(220, 253, 97)' : '#e5e7eb' }}
+                  style={{ backgroundColor: step.number < currentStep ? '#8B4513' : '#e5e7eb' }}
                 />
               </div>
             )}

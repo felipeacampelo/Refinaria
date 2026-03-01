@@ -227,9 +227,9 @@ export default function Enrollment() {
           <button
             onClick={() => navigate('/')}
             className="flex items-center mb-8 font-medium"
-            style={{ color: 'rgb(165, 44, 240)' }}
+            style={{ color: '#B22222' }}
             onMouseEnter={(e) => e.currentTarget.style.color = 'rgb(145, 24, 220)'}
-            onMouseLeave={(e) => e.currentTarget.style.color = 'rgb(165, 44, 240)'}
+            onMouseLeave={(e) => e.currentTarget.style.color = '#B22222'}
           >
             <ArrowLeft className="w-5 h-5 mr-2" style={{ color: 'inherit' }} />
             Voltar
@@ -258,7 +258,7 @@ export default function Enrollment() {
               className="border rounded-lg p-6 mb-8"
               style={{
                 backgroundColor: 'rgba(220, 253, 97, 0.1)',
-                borderColor: 'rgb(220, 253, 97)'
+                borderColor: '#8B4513'
               }}
             >
               <h3 className="font-semibold text-lg mb-4">Detalhes da Inscrição</h3>
@@ -308,9 +308,9 @@ export default function Enrollment() {
         <button
           onClick={() => navigate('/')}
           className="flex items-center mb-8 font-medium transition-colors"
-          style={{ color: 'rgb(165, 44, 240)' }}
-          onMouseEnter={(e) => e.currentTarget.style.color = 'rgb(145, 24, 220)'}
-          onMouseLeave={(e) => e.currentTarget.style.color = 'rgb(165, 44, 240)'}
+          style={{ color: '#B22222' }}
+          onMouseEnter={(e) => e.currentTarget.style.color = '#8B0000'}
+          onMouseLeave={(e) => e.currentTarget.style.color = '#B22222'}
         >
           <ArrowLeft className="w-5 h-5 mr-2" style={{ color: 'inherit' }} />
           Voltar
@@ -463,29 +463,9 @@ export default function Enrollment() {
               />
             </div>
 
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Tamanho da Camiseta *
-              </label>
-              <select
-                required
-                value={formData.tamanho_camiseta}
-                onChange={(e) => setFormData({ ...formData, tamanho_camiseta: e.target.value })}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-gray-900 bg-white appearance-none cursor-pointer"
-                style={{ backgroundImage: "url('data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e')", backgroundRepeat: 'no-repeat', backgroundPosition: 'right 0.75rem center', backgroundSize: '1.25rem' }}
-              >
-                <option value="">Selecione o tamanho...</option>
-                <option value="PP">PP</option>
-                <option value="P">P</option>
-                <option value="M">M</option>
-                <option value="G">G</option>
-                <option value="GG">GG</option>
-                <option value="XG">XG</option>
-              </select>
-            </div>
             
             <div className="border-t pt-6 mt-6">
-              <h3 className="text-lg font-semibold mb-4" style={{ color: 'rgb(165, 44, 240)' }}>
+              <h3 className="text-lg font-semibold mb-4" style={{ color: '#B22222' }}>
               </h3>
               
               <div className="mb-6">
@@ -525,25 +505,14 @@ export default function Enrollment() {
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Quem é seu líder de PG? *
                 </label>
-                <select
+                <input
+                  type="text"
                   required
                   value={formData.lider_pg}
                   onChange={(e) => setFormData({ ...formData, lider_pg: e.target.value })}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-gray-900 bg-white appearance-none cursor-pointer"
-                  style={{ backgroundImage: "url('data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e')", backgroundRepeat: 'no-repeat', backgroundPosition: 'right 0.75rem center', backgroundSize: '1.25rem' }}
-                >
-                  <option value="">Selecione seu líder de PG...</option>
-                  <option value="Cleber e Bruna">Cleber e Bruna</option>
-                  <option value="Thalles">Thalles</option>
-                  <option value="Matheus Vox">Matheus Vox</option>
-                  <option value="Renan e Karol">Renan e Karol</option>
-                  <option value="Guigo e Ana Lu">Guigo e Ana Lu</option>
-                  <option value="Lucas Luz e Liz">Lucas Luz e Liz</option>
-                  <option value="Lucas Daniel e Gih Bia">Lucas Daniel e Gih Bia</option>
-                  <option value="Lucas Cardoso e Manu Camargo">Lucas Cardoso e Manu Camargo</option>
-                  <option value="Pedrão e Julia">Pedrão e Julia</option>
-                  <option value="Não tenho PG">Não tenho PG</option>
-                </select>
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple focus:border-transparent text-gray-900 bg-white"
+                  placeholder="Nome do seu líder de PG"
+                />
               </div>
             </div>
 
@@ -556,7 +525,7 @@ export default function Enrollment() {
                 onChange={(e) => setFormData({ ...formData, observacoes: e.target.value })}
                 rows={4}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple focus:border-transparent text-gray-900 bg-white"
-                placeholder="Deseja ficar no quarto com alguém? Restrições alimentares, necessidades especiais, etc..."
+                placeholder="Deseja ficar no quarto com alguém? Possui alergias? Restrições alimentares, necessidades especiais, etc..."
               />
             </div>
 
@@ -635,7 +604,7 @@ export default function Enrollment() {
           <div className="bg-white rounded-xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
             <div className="p-6">
               <div className="flex items-center justify-between mb-6">
-                <h2 className="text-2xl font-bold" style={{ color: 'rgb(165, 44, 240)' }}>
+                <h2 className="text-2xl font-bold" style={{ color: '#B22222' }}>
                   Política de Reembolso
                 </h2>
                 <button
@@ -652,50 +621,50 @@ export default function Enrollment() {
                 </p>
 
                 <p className="text-sm text-gray-600">
-                  A contar do primeiro dia de inscrição (15/11/25)
+                  Evento: 08 de maio de 2026
                 </p>
 
                 <div className="space-y-3 bg-gray-50 p-4 rounded-lg">
                   <div className="flex items-start gap-3">
-                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center text-sm font-semibold">
+                    <span className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-sm font-semibold" style={{ backgroundColor: 'rgba(178, 34, 34, 0.1)', color: '#B22222' }}>
                       1
                     </span>
                     <p>
-                      O reembolso será concedido <strong>integralmente</strong>, com até <strong>120 dias</strong> antes do acampamento;
+                      O reembolso será concedido <strong>integralmente</strong>, com até <strong>120 dias</strong> antes do evento (até 08/01/2026);
                     </p>
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center text-sm font-semibold">
+                    <span className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-sm font-semibold" style={{ backgroundColor: 'rgba(178, 34, 34, 0.1)', color: '#B22222' }}>
                       2
                     </span>
                     <p>
-                      O reembolso será de <strong>80% do valor pago</strong>, com até <strong>90 dias</strong> antes do acampamento;
+                      O reembolso será de <strong>80% do valor pago</strong>, com até <strong>90 dias</strong> antes do evento (até 07/02/2026);
                     </p>
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center text-sm font-semibold">
+                    <span className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-sm font-semibold" style={{ backgroundColor: 'rgba(178, 34, 34, 0.1)', color: '#B22222' }}>
                       3
                     </span>
                     <p>
-                      O reembolso será de <strong>40% do valor pago</strong>, com até <strong>60 dias</strong> antes do acampamento;
+                      O reembolso será de <strong>40% do valor pago</strong>, com até <strong>60 dias</strong> antes do evento (até 09/03/2026);
                     </p>
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center text-sm font-semibold">
+                    <span className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-sm font-semibold" style={{ backgroundColor: 'rgba(178, 34, 34, 0.1)', color: '#B22222' }}>
                       4
                     </span>
                     <p>
-                      O reembolso será de <strong>20% do valor pago</strong>, com até <strong>30 dias</strong> antes do acampamento.
+                      O reembolso será de <strong>20% do valor pago</strong>, com até <strong>30 dias</strong> antes do evento (até 08/04/2026).
                     </p>
                   </div>
                 </div>
 
                 <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded">
                   <p className="text-red-800 font-semibold">
-                    Obs.: Não será concedido reembolso em caso de cancelamento ou desistência, após o prazo de trinta dias antes do acampamento.
+                    Obs.: Não será concedido reembolso em caso de cancelamento ou desistência, após o prazo de trinta dias antes do evento (após 08/04/2026).
                   </p>
                 </div>
               </div>
@@ -709,7 +678,7 @@ export default function Enrollment() {
                     await processEnrollment();
                   }}
                   className="w-full py-3 px-6 rounded-lg font-semibold text-white transition-colors"
-                  style={{ backgroundColor: 'rgb(165, 44, 240)' }}
+                  style={{ backgroundColor: '#B22222' }}
                 >
                   Aceito os Termos de Reembolso
                 </button>

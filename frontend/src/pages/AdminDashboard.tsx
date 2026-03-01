@@ -131,7 +131,7 @@ export default function AdminDashboard() {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2" style={{ borderColor: 'rgb(165, 44, 240)' }}></div>
+          <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2" style={{ borderColor: '#B22222' }}></div>
           <p className="mt-4 text-gray-600">Carregando...</p>
         </div>
       </div>
@@ -147,7 +147,7 @@ export default function AdminDashboard() {
             <button
               onClick={() => navigate('/')}
               className="flex items-center gap-1 sm:gap-2 font-medium text-sm sm:text-base"
-              style={{ color: 'rgb(165, 44, 240)' }}
+              style={{ color: '#B22222' }}
             >
               <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5" />
               <span className="hidden sm:inline">Voltar</span>
@@ -167,7 +167,7 @@ export default function AdminDashboard() {
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-1 sm:gap-2 px-3 sm:px-4 py-2 rounded-lg transition-colors text-sm sm:text-base"
-              style={{ backgroundColor: 'rgb(165, 44, 240)', color: 'white' }}
+              style={{ backgroundColor: '#B22222', color: 'white' }}
             >
               <Settings className="w-4 h-4" />
               <span className="hidden sm:inline">Admin</span>
@@ -182,7 +182,7 @@ export default function AdminDashboard() {
             <div className="bg-white rounded-xl shadow-lg p-3 sm:p-6">
               <div className="flex items-center justify-between mb-2 sm:mb-4">
                 <div className="p-2 sm:p-3 rounded-full" style={{ backgroundColor: 'rgba(165, 44, 240, 0.1)' }}>
-                  <Users className="w-4 h-4 sm:w-6 sm:h-6" style={{ color: 'rgb(165, 44, 240)' }} />
+                  <Users className="w-4 h-4 sm:w-6 sm:h-6" style={{ color: '#B22222' }} />
                 </div>
                 <span className="text-xs sm:text-sm text-gray-500 hidden sm:block">+{stats.enrollments.recent} esta semana</span>
               </div>
@@ -213,7 +213,7 @@ export default function AdminDashboard() {
             <div className="bg-white rounded-xl shadow-lg p-3 sm:p-6">
               <div className="flex items-center justify-between mb-2 sm:mb-4">
                 <div className="p-2 sm:p-3 rounded-full" style={{ backgroundColor: 'rgba(165, 44, 240, 0.1)' }}>
-                  <DollarSign className="w-4 h-4 sm:w-6 sm:h-6" style={{ color: 'rgb(165, 44, 240)' }} />
+                  <DollarSign className="w-4 h-4 sm:w-6 sm:h-6" style={{ color: '#B22222' }} />
                 </div>
                 <TrendingUp className="w-4 h-4 sm:w-5 sm:h-5 text-green-600" />
               </div>
@@ -407,7 +407,7 @@ export default function AdminDashboard() {
                         className="flex items-center gap-1 px-2 lg:px-3 py-1 text-xs lg:text-sm rounded-lg transition-colors"
                         style={{ 
                           backgroundColor: 'rgba(165, 44, 240, 0.1)',
-                          color: 'rgb(165, 44, 240)'
+                          color: '#B22222'
                         }}
                       >
                         <Eye className="w-3 h-3 lg:w-4 lg:h-4" />
@@ -439,7 +439,7 @@ export default function AdminDashboard() {
                 <div className="space-y-4 sm:space-y-6">
                   {/* Dados Pessoais */}
                   <div>
-                    <h3 className="text-base sm:text-lg font-semibold mb-2 sm:mb-3" style={{ color: 'rgb(165, 44, 240)' }}>
+                    <h3 className="text-base sm:text-lg font-semibold mb-2 sm:mb-3" style={{ color: '#B22222' }}>
                       Dados Pessoais
                     </h3>
                     <div className="grid grid-cols-2 gap-2 sm:gap-4">
@@ -470,10 +470,10 @@ export default function AdminDashboard() {
                     </div>
                   </div>
 
-                  {/* Dados do Acampamento */}
+                  {/* Dados do Retiro */}
                   <div>
-                    <h3 className="text-base sm:text-lg font-semibold mb-2 sm:mb-3" style={{ color: 'rgb(165, 44, 240)' }}>
-                      Acampamento
+                    <h3 className="text-base sm:text-lg font-semibold mb-2 sm:mb-3" style={{ color: '#B22222' }}>
+                      Retiro
                     </h3>
                     <div className="grid grid-cols-2 gap-2 sm:gap-4">
                       <div>
@@ -499,7 +499,7 @@ export default function AdminDashboard() {
 
                   {/* Inscrição */}
                   <div>
-                    <h3 className="text-base sm:text-lg font-semibold mb-2 sm:mb-3" style={{ color: 'rgb(165, 44, 240)' }}>
+                    <h3 className="text-base sm:text-lg font-semibold mb-2 sm:mb-3" style={{ color: '#B22222' }}>
                       Pagamento
                     </h3>
                     <div className="grid grid-cols-2 gap-2 sm:gap-4">
@@ -543,7 +543,7 @@ export default function AdminDashboard() {
                       </div>
                       <div>
                         <label className="text-xs sm:text-sm text-gray-600">Valor Final</label>
-                        <p className="font-medium text-base sm:text-lg" style={{ color: 'rgb(165, 44, 240)' }}>
+                        <p className="font-medium text-base sm:text-lg" style={{ color: '#B22222' }}>
                           R$ {selectedEnrollment.final_amount}
                         </p>
                       </div>
@@ -561,7 +561,7 @@ export default function AdminDashboard() {
                   {/* Observações */}
                   {selectedEnrollment.form_data?.observacoes && (
                     <div>
-                      <h3 className="text-base sm:text-lg font-semibold mb-2 sm:mb-3" style={{ color: 'rgb(165, 44, 240)' }}>
+                      <h3 className="text-base sm:text-lg font-semibold mb-2 sm:mb-3" style={{ color: '#B22222' }}>
                         Observações
                       </h3>
                       <p className="text-sm sm:text-base text-gray-700">{selectedEnrollment.form_data.observacoes}</p>
@@ -571,7 +571,7 @@ export default function AdminDashboard() {
                   {/* Detalhes das Parcelas - PIX Parcelado */}
                   {selectedEnrollment.payment_method === 'PIX_INSTALLMENT' && selectedEnrollment.payments && selectedEnrollment.payments.length > 0 && (
                     <div>
-                      <h3 className="text-base sm:text-lg font-semibold mb-2 sm:mb-3" style={{ color: 'rgb(165, 44, 240)' }}>
+                      <h3 className="text-base sm:text-lg font-semibold mb-2 sm:mb-3" style={{ color: '#B22222' }}>
                         Parcelas
                       </h3>
                       <div className="space-y-2">
@@ -612,7 +612,7 @@ export default function AdminDashboard() {
 
                   {/* Datas */}
                   <div>
-                    <h3 className="text-base sm:text-lg font-semibold mb-2 sm:mb-3" style={{ color: 'rgb(165, 44, 240)' }}>
+                    <h3 className="text-base sm:text-lg font-semibold mb-2 sm:mb-3" style={{ color: '#B22222' }}>
                       Datas
                     </h3>
                     <div className="grid grid-cols-2 gap-2 sm:gap-4">
@@ -638,7 +638,7 @@ export default function AdminDashboard() {
                   <button
                     onClick={() => setSelectedEnrollment(null)}
                     className="w-full sm:w-auto px-6 py-2 rounded-lg text-sm sm:text-base"
-                    style={{ backgroundColor: 'rgb(165, 44, 240)', color: 'white' }}
+                    style={{ backgroundColor: '#B22222', color: 'white' }}
                   >
                     Fechar
                   </button>

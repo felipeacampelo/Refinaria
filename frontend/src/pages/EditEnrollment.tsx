@@ -160,9 +160,9 @@ export default function EditEnrollment() {
         <button
           onClick={() => navigate('/minhas-inscricoes')}
           className="flex items-center mb-8 font-medium transition-colors"
-          style={{ color: 'rgb(165, 44, 240)' }}
+          style={{ color: '#B22222' }}
           onMouseEnter={(e) => e.currentTarget.style.color = 'rgb(145, 24, 220)'}
-          onMouseLeave={(e) => e.currentTarget.style.color = 'rgb(165, 44, 240)'}
+          onMouseLeave={(e) => e.currentTarget.style.color = '#B22222'}
         >
           <ArrowLeft className="w-5 h-5 mr-2" style={{ color: 'inherit' }} />
           Voltar para Minhas Inscrições
