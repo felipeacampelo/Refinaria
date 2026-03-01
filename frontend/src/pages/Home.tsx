@@ -10,7 +10,7 @@ export default function Home() {
   const { isAuthenticated, user, logout, isAdmin } = useAuth();
   const [products, setProducts] = useState<Product[]>([]);
   const [eventDate, setEventDate] = useState<Date | null>(null);
-  const [maxInstallments, setMaxInstallments] = useState(6);
+  const [maxInstallments, setMaxInstallments] = useState(2);
 
   useEffect(() => {
     loadProducts();

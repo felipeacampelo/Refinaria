@@ -353,14 +353,14 @@ class Settings(models.Model):
     Global settings for the application.
     """
     max_installments = models.IntegerField(
-        default=6,
+        default=2,
         validators=[MinValueValidator(1), MaxValueValidator(12)],
         verbose_name='Máximo de Parcelas Padrão',
         help_text='Número máximo de parcelas permitidas por padrão (sem cupom especial)'
     )
     
     max_installments_with_coupon = models.IntegerField(
-        default=10,
+        default=2,
         validators=[MinValueValidator(1), MaxValueValidator(12)],
         verbose_name='Máximo de Parcelas com Cupom',
         help_text='Número máximo de parcelas permitidas quando cupom especial é aplicado'

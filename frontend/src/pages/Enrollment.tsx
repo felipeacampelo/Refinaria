@@ -616,55 +616,9 @@ export default function Enrollment() {
               </div>
 
               <div className="space-y-4 text-gray-700">
-                <p className="font-semibold text-lg">
-                  O jovem tem o direito de solicitar reembolso nas seguintes condições:
-                </p>
-
-                <p className="text-sm text-gray-600">
-                  Evento: 08 de maio de 2026
-                </p>
-
-                <div className="space-y-3 bg-gray-50 p-4 rounded-lg">
-                  <div className="flex items-start gap-3">
-                    <span className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-sm font-semibold" style={{ backgroundColor: 'rgba(171, 57, 51, 0.1)', color: '#AB3933' }}>
-                      1
-                    </span>
-                    <p>
-                      O reembolso será concedido <strong>integralmente</strong>, com até <strong>120 dias</strong> antes do evento (até 08/01/2026);
-                    </p>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <span className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-sm font-semibold" style={{ backgroundColor: 'rgba(171, 57, 51, 0.1)', color: '#AB3933' }}>
-                      2
-                    </span>
-                    <p>
-                      O reembolso será de <strong>80% do valor pago</strong>, com até <strong>90 dias</strong> antes do evento (até 07/02/2026);
-                    </p>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <span className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-sm font-semibold" style={{ backgroundColor: 'rgba(171, 57, 51, 0.1)', color: '#AB3933' }}>
-                      3
-                    </span>
-                    <p>
-                      O reembolso será de <strong>40% do valor pago</strong>, com até <strong>60 dias</strong> antes do evento (até 09/03/2026);
-                    </p>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <span className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-sm font-semibold" style={{ backgroundColor: 'rgba(171, 57, 51, 0.1)', color: '#AB3933' }}>
-                      4
-                    </span>
-                    <p>
-                      O reembolso será de <strong>20% do valor pago</strong>, com até <strong>30 dias</strong> antes do evento (até 08/04/2026).
-                    </p>
-                  </div>
-                </div>
-
                 <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded">
                   <p className="text-red-800 font-semibold">
-                    Obs.: Não será concedido reembolso em caso de cancelamento ou desistência, após o prazo de trinta dias antes do evento (após 08/04/2026).
+                    As inscrições não são reembolsáveis devido à proximidade do evento.
                   </p>
                 </div>
               </div>
@@ -680,7 +634,7 @@ export default function Enrollment() {
                   className="w-full py-3 px-6 rounded-lg font-semibold text-white transition-colors"
                   style={{ backgroundColor: '#AB3933' }}
                 >
-                  Aceito os Termos de Reembolso
+                  Aceito a Política de Não Reembolso
                 </button>
                 <button
                   onClick={() => setShowRefundModal(false)}
