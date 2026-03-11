@@ -201,7 +201,7 @@ export default function Home() {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-lg font-semibold mb-1" style={{ color: '#AB3933' }}>Data</h3>
-                  <p className="text-2xl font-bold text-gray-900">07, 08 e 09 de maio</p>
+                  <p className="text-2xl font-bold text-gray-900">22, 23 e 24 de maio</p>
                   <p className="text-sm text-gray-600 mt-1"></p>
                 </div>
               </div>
