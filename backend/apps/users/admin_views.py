@@ -42,6 +42,27 @@ def admin_dashboard_stats(request):
         status='PENDING'
     ).aggregate(total=Sum('amount'))['total'] or 0
     
+    # Calculate Asaas fees for confirmed payments
+    confirmed_payment_list = Payment.objects.filter(
+        status__in=['CONFIRMED', 'RECEIVED']
+    ).select_related('enrollment')
+    
+    total_fees = 0
+    for payment in confirmed_payment_list:
+        enrollment = payment.enrollment
+        payment_method = enrollment.payment_method
+        
+        if payment_method == 'PIX_CASH' or payment_method == 'PIX_INSTALLMENT':
+            # PIX: R$ 1.99 fixed per transaction
+            total_fees += 1.99
+        elif payment_method == 'CREDIT_CARD':
+            # Credit Card: 2.99% + R$ 0.49 per installment
+            amount = float(payment.amount)
+            total_fees += (amount * 0.0299) + 0.49
+    
+    # Calculate net revenue
+    net_revenue = float(total_revenue) - total_fees
+    
     # Recent activity (last 7 days)
     week_ago = timezone.now() - timedelta(days=7)
     recent_enrollments = Enrollment.objects.filter(
@@ -72,6 +93,8 @@ def admin_dashboard_stats(request):
         'revenue': {
             'total': float(total_revenue),
             'pending': float(pending_revenue),
+            'net': net_revenue,
+            'fees': total_fees,
         },
         'payment_methods': list(payment_methods),
     })

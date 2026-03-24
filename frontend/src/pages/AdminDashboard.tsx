@@ -32,6 +32,8 @@ interface DashboardStats {
   revenue: {
     total: number;
     pending: number;
+    net: number;
+    fees: number;
   };
   payment_methods: Array<{
     payment_method: string;
@@ -177,7 +179,7 @@ export default function AdminDashboard() {
 
         {/* Stats Grid */}
         {stats && (
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 mb-6 sm:mb-8">
+          <div className="grid grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-6 mb-6 sm:mb-8">
             {/* Total Inscrições */}
             <div className="bg-white rounded-xl shadow-lg p-3 sm:p-6">
               <div className="flex items-center justify-between mb-2 sm:mb-4">
@@ -220,9 +222,26 @@ export default function AdminDashboard() {
               <h3 className="text-sm sm:text-2xl font-bold mb-1">
                 <span className="hidden sm:inline">R$ </span>{stats.revenue.total.toLocaleString('pt-BR', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}
               </h3>
-              <p className="text-xs sm:text-base text-gray-600">Receita</p>
+              <p className="text-xs sm:text-base text-gray-600">Receita Bruta</p>
               <div className="mt-2 sm:mt-4 text-xs sm:text-sm text-gray-500 hidden sm:block">
                 R$ {stats.revenue.pending.toLocaleString('pt-BR', { minimumFractionDigits: 2 })} pendente
+              </div>
+            </div>
+
+            {/* Receita Líquida */}
+            <div className="bg-white rounded-xl shadow-lg p-3 sm:p-6">
+              <div className="flex items-center justify-between mb-2 sm:mb-4">
+                <div className="p-2 sm:p-3 rounded-full" style={{ backgroundColor: 'rgba(34, 197, 94, 0.1)' }}>
+                  <DollarSign className="w-4 h-4 sm:w-6 sm:h-6 text-green-600" />
+                </div>
+                <span className="text-xs sm:text-sm text-gray-500 hidden sm:block">-R$ {stats.revenue.fees.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</span>
+              </div>
+              <h3 className="text-sm sm:text-2xl font-bold mb-1 text-green-600">
+                <span className="hidden sm:inline">R$ </span>{stats.revenue.net.toLocaleString('pt-BR', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}
+              </h3>
+              <p className="text-xs sm:text-base text-gray-600">Receita Líquida</p>
+              <div className="mt-2 sm:mt-4 text-xs sm:text-sm text-gray-500 hidden sm:block">
+                Após taxas Asaas
               </div>
             </div>
 
